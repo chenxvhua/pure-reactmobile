@@ -1,0 +1,177 @@
+body {
+    background-color: #ebebeb
+}
+
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+
+.icon-arrow_lift {
+    background: url(../images/icon_arrow_lift.png) center center no-repeat;
+}
+/*追加的样式*/
+
+.product-detail{
+  overflow: hidden;
+}
+
+
+
+.product-detail .title-content {
+    position: relative;
+    padding: 18px
+}
+
+.product-detail .title-content .name {
+    line-height: 14px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #07111b
+}
+
+.product-detail .title-content .detail {
+    margin-bottom: 18px;
+    height: 10px;
+    font-size: 10px;
+    color: #93999f;
+}
+
+.product-detail .title-content .detail .count {
+    display: inline-block;
+    font-size: 10px;
+    color: #93999f
+}
+
+.product-detail .title-content .detail .rating {
+    display: inline-block;
+    font-size: 10px;
+    color: #93999f;
+    margin-left: 12px
+}
+
+.product-detail .title-content .price {
+    font-weight: 700;
+    line-height: 24px
+}
+
+.product-detail .title-content .price .now {
+    margin-right: 8px;
+    font-size: 14px;
+    color: #f01414
+}
+
+.product-detail .title-content .price .old {
+    font-size: 10px;
+    text-decoration: line-through;
+    color: #93999f
+}
+
+.product-detail .title-content .control {
+    position: absolute;
+    right: 12px;
+    bottom: 12px
+}
+
+.product-detail .title-content .buy {
+    position: absolute;
+    right: 15px;
+    bottom: 28px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 10px;
+    border-radius: 12px;
+    color: #333;
+    background-color: #ffd161;
+    z-index: 10
+}
+
+
+
+.product-detail .introduce {
+    padding: 18px
+}
+
+.product-detail .introduce .title {
+    line-height: 14px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #07111b
+}
+
+.product-detail .introduce .desc {
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 24px;
+    color: #4d555d
+}
+
+.product-detail .ratings {
+    padding-top: 18px
+}
+
+.product-detail .ratings .title {
+    line-height: 14px;
+    margin-left: 18px;
+    font-size: 14px;
+    color: #07111b
+}
+
+.product-detail .back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(7, 17, 27, .5);
+    border-radius: 50%
+}
+
+.back-to-up{
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right:5px;
+    background: url(../images/up.png) center center no-repeat;
+}
+
+
+
+.cross-line {
+    width: 100%;
+    height: 16px;
+    background-color: #ebebeb
+}
