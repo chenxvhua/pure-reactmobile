@@ -1,6 +1,8 @@
 const path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const extractCSS = new  ExtractTextPlugin('css/[name].css?[contenthash]');
 
 var fs = require('fs'); // 引入fs模块
 function deleteall(path) {
@@ -52,23 +54,24 @@ module.exports = {
             },
             {
                 test: /\.css$|.scss$/,
-                use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader",options:{ minimize:true }}
-                ]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader?minimize',
+                    use: ['css-loader?minimize']
+                })
             },
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 8192
-                        }
-                    }
-                ]
-            },
-            {test: /\.svg$|\.woff$|\.ttf$|\.eot$/, loader: 'url-loader?limit=8192&name=font/[hash:8].[name].[ext]'},
+            // {
+            //     test: /\.(png|jpg|gif)$/,
+            //     use: [
+            //         {
+            //             loader: 'url-loader',
+            //             options: {
+            //                 limit: 8192
+            //             }
+            //         }
+            //     ]
+            // },
+            {test: /\.jpe?g$|\.gif$|\.png$/, loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'},
+            {test: /\.svg$|\.woff$|\.ttf$|\.eot$/, loader: 'url-loader?limit=81920&name=font/[hash:8].[name].[ext]'},
         ]
     },
     plugins: [
@@ -82,6 +85,7 @@ module.exports = {
             inject: true,
             favicon:"./favicon.ico",
         }),
+        extractCSS,
         new webpack.optimize.UglifyJsPlugin({
             // 最紧凑的输出
             beautify: false,

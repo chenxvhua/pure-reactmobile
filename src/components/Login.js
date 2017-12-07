@@ -59,7 +59,7 @@ class BasicInputExample extends React.Component {
         const { getFieldProps } = this.props.form;
         return (
             <div>
-                <NavBar mode="light">登录22</NavBar>
+                <NavBar mode="light">登录</NavBar>
                 <WhiteSpace size="lg"/>
                 <List>
                     <InputItem

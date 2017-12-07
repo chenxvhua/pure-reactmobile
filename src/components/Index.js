@@ -225,7 +225,7 @@ class Index extends React.Component {
         };
         return (
             <div>
-                <NavBar mode="light">商品列表11</NavBar>
+                <NavBar mode="light">商品列表</NavBar>
                 <WhiteSpace size="md"/>
                 <ListView
                     ref={el => this.lv = el}
