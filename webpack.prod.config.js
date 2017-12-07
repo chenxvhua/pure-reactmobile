@@ -59,17 +59,6 @@ module.exports = {
                     use: ['css-loader?minimize']
                 })
             },
-            // {
-            //     test: /\.(png|jpg|gif)$/,
-            //     use: [
-            //         {
-            //             loader: 'url-loader',
-            //             options: {
-            //                 limit: 8192
-            //             }
-            //         }
-            //     ]
-            // },
             {test: /\.jpe?g$|\.gif$|\.png$/, loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'},
             {test: /\.svg$|\.woff$|\.ttf$|\.eot$/, loader: 'url-loader?limit=81920&name=font/[hash:8].[name].[ext]'},
         ]
